@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TheDate Component renders the UI as expected 1`] = `
+<div>
+  <p>
+    The current count: 
+    0
+  </p>
+  <button
+    onClick={[Function]}
+  >
+    Add 1
+  </button>
+</div>
+`;
