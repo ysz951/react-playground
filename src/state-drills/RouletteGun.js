@@ -1,29 +1,28 @@
 import React from 'react';
+
 class RouletteGun extends React.Component {
     static defaultProps = {
         bulletInChamber: 3
       };
-
-    constructor(props) {
-        super(props)
-        this.state = {
-            chamber: null,
-            spinningTheChamber: false 
-        }
-      }
-    componentWillUnmount() {
-    clearTimeout(this.timeout)
+      
+  
+    state = {
+        chamber: null,
+        spinningTheChamber: false 
     }
     handleButtonClick = () => {
-        
         this.setState({spinningTheChamber: true})
-        this.timeout = setTimeout(() => {
-            this.setState({chamber: Math.ceil(Math.random() * 3), spinningTheChamber: false})
-        }, 2000)
-
+        this.timeout = setTimeout(() => this.updateState(), 2000)
     }
 
-   
+    updateState() {
+        this.setState({chamber: Math.ceil(Math.random() * 3), spinningTheChamber: false});
+    }
+    
+    componentWillUnmount() {
+        clearTimeout(this.timeout)
+    }
+
     renderDisplay(){
         if (this.state.spinningTheChamber){
             return 'spinning the chamber and pulling the trigger!'
@@ -35,6 +34,7 @@ class RouletteGun extends React.Component {
             return `you're safe`
         }
     }
+    
     render() {
         return (
             <div>

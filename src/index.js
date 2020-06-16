@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import RouletteGun from './state-drills/RouletteGun';
-
+import Bomb from './state-drills/Bomb';
+import RouletteGun from './state-drills/RouletteGun'
+import App from './App'
 ReactDOM.render(
-  <RouletteGun />,
+  <App />,
   document.getElementById('root')
 );
 
