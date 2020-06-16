@@ -1,8 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Tabs Component closes the first tab and opens any clicked tab 1`] = `
-<ul>
+<ul
+  className="Accordion"
+>
   <li
+    className="Accordion__item"
     key="0"
   >
     <button
@@ -17,6 +20,7 @@ exports[`Tabs Component closes the first tab and opens any clicked tab 1`] = `
     </p>
   </li>
   <li
+    className="Accordion__item"
     key="1"
   >
     <button
@@ -28,11 +32,18 @@ exports[`Tabs Component closes the first tab and opens any clicked tab 1`] = `
 </ul>
 `;
 
-exports[`Tabs Component renders empty given no tabs 1`] = `<ul />`;
+exports[`Tabs Component renders empty given no tabs 1`] = `
+<ul
+  className="Accordion"
+/>
+`;
 
 exports[`Tabs Component renders the first tab by default 1`] = `
-<ul>
+<ul
+  className="Accordion"
+>
   <li
+    className="Accordion__item"
     key="0"
   >
     <button
@@ -42,6 +53,7 @@ exports[`Tabs Component renders the first tab by default 1`] = `
     </button>
   </li>
   <li
+    className="Accordion__item"
     key="1"
   >
     <button

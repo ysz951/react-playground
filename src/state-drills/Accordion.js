@@ -1,4 +1,6 @@
 import React from 'react';
+import './Accordion.css'
+
 class Accordion extends React.Component {
     static defaultProps = { sections: [] };
     state = {
@@ -20,18 +22,18 @@ class Accordion extends React.Component {
 
     renderLists() {
         return this.props.sections.map((section, index) => (
-        <li  key={index}>
+        <li  key={index} className='Accordion__item'>
             <button onClick={() => this.handleButtonClick(index)}>
                 {section.title}
             </button>
-            {!!this.props.sections.length && this.state.currentSectionIndex === index && this.renderContent()}
+            {this.state.currentSectionIndex === index && this.renderContent()}
         </li>
         ))
     }
     
     render() {
         return (
-            <ul>
+            <ul className='Accordion'>
                 {this.renderLists()}
                 
             </ul>
