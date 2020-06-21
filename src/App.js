@@ -65,28 +65,25 @@ class App extends React.Component {
   }
   render() {
     return (
-      <div className="App">
-        <DemonynApp/>
-      </div>
-      // <> 
-      //   <header>
-      //     <h1>Shopping List</h1>
-      //   </header>
-      //   <main>
-      //     <section>
-      //       <AddItemForm 
-      //         onAddItem={this.handleAddItem} 
-      //       />
-      //     </section>
-      //     <section>
-      //       <ShoppingList 
-      //         items={this.state.shoppingItems}
-      //         onDeleteItem={this.handleDeleteItem}
-      //         onCheckItem={this.handleCheckItem} 
-      //       />
-      //     </section>
-      //   </main>
-      // </>
+      <> 
+        <header>
+          <h1>Shopping List</h1>
+        </header>
+        <main>
+          <section>
+            <AddItemForm 
+              onAddItem={this.handleAddItem} 
+            />
+          </section>
+          <section>
+            <ShoppingList 
+              items={this.state.shoppingItems}
+              onDeleteItem={this.handleDeleteItem}
+              onCheckItem={this.handleCheckItem} 
+            />
+          </section>
+        </main>
+      </>
     )
   }
 }
