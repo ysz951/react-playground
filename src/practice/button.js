@@ -4,8 +4,8 @@ export default function Button(props) {
 
   return (
     <button onClick = {() => props.onClick()}>
-        123
-        </button>
+        {props.content}
+    </button>
   );
 }
 Button.defaultProps = {

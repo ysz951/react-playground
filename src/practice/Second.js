@@ -15,7 +15,7 @@ class Second extends React.Component {
                 First
             </Link>
             <br/>
-            <Button onClick = {this.handleClick}/>
+            <Button onClick = {this.handleClick} content="Minus One"/>
       </div>
     )
   }
